@@ -55,10 +55,10 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView;
-        rootView =  inflater.inflate(R.layout.fragment_main, container, false);
+        
+        View rootView =  inflater.inflate(R.layout.fragment_main, container, false);
         GridView gridview = (GridView) rootView.findViewById(R.id.gridview_movie_poster);
-        gridview.setAdapter(new ImageAdapter(getContext()));
+        gridview.setAdapter(new ImageAdapter(getActivity()));
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
